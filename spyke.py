@@ -12,6 +12,7 @@ ser.write(b'\x03') #Sends CTRL + C (End of text / break) to the REPL and enables
 ser.write(b'import hub\r')
 print('I have imported the hub module for you')
 
+# Command to send text to the LED matrix
 def display(text):
     command = 'hub.display.show('text')\r'
     ser.write(b(command))
